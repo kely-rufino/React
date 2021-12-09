@@ -1,0 +1,33 @@
+.page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.article{
+    box-sizing: content-box;
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+
+.title{
+    font-size: 1.5em;
+    text-align: left;
+    margin: 0 0 1em 0;
+}
+
+.subtitle{
+    font-size: 2em;
+    text-align: left;
+    margin: 0;
+}
+
+.blue-bg {
+    background-color: #4f6fa9;
+    color: #fff;
+}
+
+.orange-bg{
+    background-color: #f3c40f;
+}
