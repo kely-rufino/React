@@ -23,11 +23,13 @@
     margin: 0;
 }
 
+.blue-text{
+    color: #4f6fa9;
+    border: solid 2px #157FFB;
+    background: red;
+}
+
 .blue-bg {
     background-color: #4f6fa9;
     color: #fff;
-}
-
-.orange-bg{
-    background-color: #f3c40f;
 }

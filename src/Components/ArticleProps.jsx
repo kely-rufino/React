@@ -1,17 +1,24 @@
 import "./Article.css"
+import {useState} from "react";
 
+export const ArticleProps = ({title, subtitle, content, backgroundColor, textColor}) => {
+    const [style, updateStyle] = useState(backgroundColor)
+    const classes = style !== undefined ? ["article", style].join(" "): "article";
 
-export const ArticleProps = (props) => {
-    const classes = props.backgroundColor !== undefined ? ["article", props.backgroundColor].join(" "): "article"
-    function printProps (){
-        return console.log(props.title, props.subtitle)
+    const changeColor = () => {
+        if(style === backgroundColor){
+            updateStyle(textColor)
+        } else{
+            updateStyle(backgroundColor)
+        }
     }
+
     return (
         <article className={classes}>
-            <h1 className={"title"}> {props.title} </h1>
-            <h2 className={"subtitle"}> {props.subtitle} </h2>
-            <p> {props.content} </p>
-            <button onClick = {printProps}>
+            <h1 className={"title"}> {title} </h1>
+            <h2 className={"subtitle"}> {subtitle} </h2>
+            <p> {content} </p>
+            <button onClick={changeColor}>
                 Click me!
             </button>
         </article>
